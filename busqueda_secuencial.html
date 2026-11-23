@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>6.1 Búsqueda Secuencial</title>
+    <!-- Conectamos la hoja de estilos unificada -->
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="contenedor-principal">
+
+        <h1>6.1. Búsqueda Secuencial</h1>
+
+        <div class="subtitulo-seccion">¿Qué es la búsqueda secuencial?</div>
+        <p class="texto-explicacion">
+            La búsqueda secuencial, también conocida como búsqueda lineal, es el algoritmo más sencillo y directo para encontrar un elemento dentro de un conjunto de datos.
+            Consiste en recorrer la estructura de datos elemento por elemento, desde el primer componente hasta el último, comparando cada valor con el objetivo buscado hasta encontrar una coincidencia o llegar al final de la lista.
+        </p>
+
+        <div class="subtitulo-seccion">Cómo funciona (paso a paso)</div>
+        <div class="contenedor-bloque">
+            <ol>
+                <li>Se toma el primer elemento de la lista (índice 0) como punto de partida.</li>
+                <li>Se compara el valor de ese elemento con el dato objetivo que se desea encontrar.</li>
+                <li>Si coinciden, el algoritmo se detiene y devuelve la posición (índice) actual.</li>
+                <li>Si no coinciden, el algoritmo avanza automáticamente al siguiente elemento de la lista.</li>
+                <li>El proceso se repite hasta hallar el elemento o llegar al final del arreglo, indicando en este último caso que el dato no existe.</li>
+            </ol>
+        </div>
+
+        <div class="subtitulo-seccion">Ventajas y Desventajas</div>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Simplicidad:</strong> Es muy fácil de entender, programar e implementar en cualquier lenguaje de código como C#.</li>
+                <li><strong>Independencia del orden:</strong> A diferencia de la búsqueda binaria, <strong>no requiere</strong> que los datos estén previamente ordenados; funciona perfectamente con listas totalmente revueltas.</li>
+                <li><strong>Desventaja principal:</strong> Es ineficiente en listas muy grandes, ya que si el elemento está al final o no existe, el programa tiene que revisar absolutamente todos los datos (baja velocidad).</li>
+            </ul>
+        </div>
+
+        <div class="subtitulo-seccion">Complejidad algorítmica</div>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Mejor caso:</strong> O(1) &mdash; el elemento buscado está justo en la primera posición.</li>
+                <li><strong>Caso promedio y Peor caso:</strong> O(n) &mdash; se deben recorrer los <em>n</em> elementos de la lista.</li>
+                <li><strong>Espacio:</strong> O(1) &mdash; solo requiere memoria auxiliar básica para los contadores y variables de control.</li>
+            </ul>
+        </div>
+
+        <!-- Enlace hacia la página independiente con el ejemplo en C# -->
+        <div class="contenedor-enlace-extra">
+            <a href="ejemplo_secuencial.html">Ver ejemplo e implementación en C# &rarr;</a>
+        </div>
+
+        <!-- Botón para regresar a métodos -->
+        <div class="boton-volver">
+            <a href="metodos_ordenamiento.html">&larr; Volver a Métodos de Ordenamiento</a>
+        </div>
+
+    </div>
+</body>
+</html>

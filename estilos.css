@@ -1,0 +1,132 @@
+/* Fondo de red tecnológica con imagen */
+body {
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por el nombre exacto de tu imagen si le pusiste otro */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #030407; /* Color de respaldo por si tarda en cargar */
+    color: #1212b8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* Tarjeta principal que envuelve el contenido */
+.contenedor-principal {
+    background-color: #2481c0;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(37, 54, 150, 0.08);
+    text-align: center;
+}
+
+/* Título principal con línea decorativa */
+h1 {
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #010306;
+}
+
+/* Subtítulos de sección */
+.subtitulo-seccion {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    text-align: left;
+    border-left: 4px solid #050a13;
+    padding-left: 12px;
+}
+
+/* Párrafos de texto */
+.texto-explicacion {
+    text-align: justify;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Cajas destacadas para las listas y pasos */
+.contenedor-bloque {
+    background-color: #2b435c;
+    border: 1px solid #1d548b;
+    border-radius: 10px;
+    padding: 20px 25px;
+    text-align: left;
+    margin: 15px auto 25px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+li strong {
+    color: #010204;
+}
+
+/* Bloques de código estilo editor oscuro */
+.bloque-codigo {
+    background-color: #040608;
+    color: #05080b;
+    font-family: 'Consolas', 'Courier New', monospace;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Diseño de botones para los enlaces */
+.contenedor-enlace-extra, .boton-volver {
+    margin-top: 25px;
+    display: block;
+}
+
+a {
+    display: inline-block;
+    background-color: #030408;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(2, 3, 7, 0.2);
+}
+
+a:hover {
+    background-color: #040508;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(3, 4, 7, 0.3);
+}
+
+/* Estilo diferente para el botón de regresar */
+.boton-volver a {
+    background-color: #3c6597;
+    box-shadow: 0 4px 6px rgba(148, 156, 166, 0.2);
+}
+
+.boton-volver a:hover {
+    background-color: #030406;
+}

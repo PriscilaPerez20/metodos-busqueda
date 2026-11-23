@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>6.3 Búsqueda por Funciones Hash</title>
+    <!-- Conectamos la hoja de estilos unificada -->
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="contenedor-principal">
+
+        <h1>6.3. Búsqueda por Funciones Hash</h1>
+
+        <div class="subtitulo-seccion">¿Qué es una búsqueda Hash?</div>
+        <p class="texto-explicacion">
+            La búsqueda por funciones Hash (o dispersión) es un método de acceso directo a los datos basado en una clave.
+            A diferencia de la búsqueda secuencial o la binaria, aquí no se realizan comparaciones sucesivas elemento por elemento.
+            En su lugar, se utiliza una <strong>función matemática (función hash)</strong> que transforma una clave de entrada
+            (como un nombre, un número de control o un ID) directamente en un índice numérico dentro de una tabla, indicando
+            la posición exacta donde se encuentra o debe almacenarse el elemento.
+        </p>
+
+        <div class="subtitulo-seccion">Cómo funciona (paso a paso)</div>
+        <div class="contenedor-bloque">
+            <ol>
+                <li>Se recibe el dato o clave de búsqueda que se desea localizar (por ejemplo, una matrícula escolar).</li>
+                <li>La clave se introduce en la <strong>función hash</strong> (como la operación módulo, por ejemplo: `clave % tamaño_tabla`).</li>
+                <li>La función realiza el cálculo matemático y arroja un valor numérico entero que corresponde al índice de la tabla.</li>
+                <li>El sistema accede directamente a esa posición de memoria en tiempo récord para recuperar o verificar el registro.</li>
+            </ol>
+        </div>
+
+        <div class="subtitulo-seccion">El problema de las Colisiones</div>
+        <p class="texto-explicacion">
+            Una colisión ocurre cuando la función hash procesa dos claves diferentes y arroja exactamente el mismo resultado numérico (el mismo índice).
+            Como dos datos no pueden ocupar el mismo espacio en la tabla al mismo tiempo, los algoritmos hash implementan métodos de resolución de colisiones, tales como:
+        </p>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Encadenamiento (Chaining):</strong> Cada posición de la tabla apunta a una lista enlazada; si hay colisión, el nuevo elemento se agrega a la lista de esa misma posición.</li>
+                <li><strong>Prueba Lineal (Linear Probing):</strong> Si la casilla está ocupada, el sistema busca de forma secuencial en la siguiente casilla disponible.</li>
+            </ul>
+        </div>
+
+        <div class="subtitulo-seccion">Ventajas y Desventajas</div>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Velocidad insuperable:</strong> Es el método más rápido para recuperar información en el mejor de los casos, logrando un acceso prácticamente inmediato.</li>
+                <li><strong>Ideal para bases de datos:</strong> Es la técnica fundamental detrás de diccionarios, tablas asociativas e indexación de grandes volúmenes de registros.</li>
+                <li><strong>Consumo de memoria (Desventaja):</strong> Requiere reservar espacio de memoria adicional para la tabla hash, y su eficiencia disminuye si ocurren demasiadas colisiones.</li>
+            </ul>
+        </div>
+
+        <div class="subtitulo-seccion">Complejidad algorítmica</div>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Mejor caso y Caso promedio:</strong> O(1) &mdash; acceso directo e instantáneo a través de la clave.</li>
+                <li><strong>Peor caso:</strong> O(n) &mdash; ocurre cuando hay un exceso de colisiones y el sistema se ve obligado a buscar de manera lineal dentro de la estructura afectada.</li>
+                <li><strong>Espacio:</strong> O(n) &mdash; depende directamente del tamaño de la tabla hash y el almacenamiento de las claves.</li>
+            </ul>
+        </div>
+
+        <!-- Enlace hacia la página independiente con el ejemplo en C# -->
+        <div class="contenedor-enlace-extra">
+            <a href="ejemplo_hash.html">Ver ejemplo e implementación en C# &rarr;</a>
+        </div>
+
+        <!-- Botón para regresar a métodos -->
+        <div class="boton-volver">
+            <a href="metodos_ordenamiento.html">&larr; Volver a Métodos de Ordenamiento</a>
+        </div>
+
+    </div>
+</body>
+</html>

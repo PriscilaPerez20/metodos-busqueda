@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Implementación de Búsqueda Binaria en C#</title>
+    <!-- Conectamos la hoja de estilos unificada -->
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="contenedor-principal">
+
+        <h1>Implementación de Búsqueda Binaria en C#</h1>
+
+        <div class="subtitulo-seccion">Código fuente de ejemplo</div>
+        <p class="texto-explicacion">
+            A continuación se muestra un ejemplo práctico en C# que implementa el algoritmo de búsqueda binaria
+            sobre un arreglo ordenado de números enteros.
+        </p>
+
+        <!-- Bloque con el código de programación -->
+        <div class="contenedor-bloque" style="font-family: monospace; font-size: 14px; text-align: left; background-color: #f4f4f4; padding: 15px; border-radius: 6px;">
+<pre>
+using System;
+
+class Program
+{
+    static int BusquedaBinaria(int[] arreglo, int objetivo)
+    {
+        int inicio = 0;
+        int fin = arreglo.Length - 1;
+
+        while (inicio &lt;= fin)
+        {
+            int medio = inicio + (fin - inicio) / 2;
+
+            if (arreglo[medio] == objetivo)
+                return medio; // Elemento encontrado
+
+            if (arreglo[medio] &lt; objetivo)
+                inicio = medio + 1; // Buscar en la mitad derecha
+            else
+                fin = medio - 1; // Buscar en la mitad izquierda
+        }
+
+        return -1; // No encontrado
+    }
+
+    static void Main()
+    {
+        int[] numeros = { 2, 5, 8, 12, 16, 23, 38, 56, 72, 91 };
+        int objetivo = 23;
+
+        int resultado = BusquedaBinaria(numeros, objetivo);
+
+        if (resultado != -1)
+            Console.WriteLine("Elemento encontrado en el índice: " + resultado);
+        else
+            Console.WriteLine("Elemento no encontrado.");
+    }
+}
+</pre>
+        </div>
+
+        <!-- Botón para regresar a la página de búsqueda binaria -->
+        <div class="boton-volver">
+            <a href="busqueda_binaria.html">&larr; Volver a Búsqueda Binaria</a>
+        </div>
+
+    </div>
+</body>
+</html>

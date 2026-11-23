@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Implementación de Hash en C#</title>
+    <!-- Conectamos la hoja de estilos unificada -->
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="contenedor-principal">
+
+        <h1>Implementación de Búsqueda Hash en C#</h1>
+
+        <div class="subtitulo-seccion">Código fuente de ejemplo</div>
+        <p class="texto-explicacion">
+            A continuación se muestra un ejemplo práctico en C# utilizando la clase <code>Dictionary&lt;TKey, TValue&gt;</code>,
+            la cual implementa internamente una tabla hash para realizar búsquedas rápidas mediante claves y valores.
+        </p>
+
+        <!-- Bloque con el código de programación -->
+        <div class="contenedor-bloque" style="font-family: monospace; font-size: 14px; text-align: left; background-color: #f4f4f4; padding: 15px; border-radius: 6px;">
+<pre>
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Creamos una tabla hash (Diccionario) con claves y nombres
+        Dictionary&lt;int, string&gt; tablaHash = new Dictionary&lt;int, string&gt;();
+
+        // Agregamos elementos (Clave, Valor)
+        tablaHash.Add(101, "Priscila");
+        tablaHash.Add(102, "Brissel");
+        tablaHash.Add(103, "Carlos");
+
+        int claveBuscada = 102;
+
+        // Búsqueda eficiente por clave Hash O(1)
+        if (tablaHash.ContainsKey(claveBuscada))
+        {
+            Console.WriteLine("¡Elemento encontrado! Nombre: " + tablaHash[claveBuscada]);
+        }
+        else
+        {
+            Console.WriteLine("Elemento no encontrado.");
+        }
+    }
+}
+</pre>
+        </div>
+
+        <!-- Botón para regresar a la página de búsqueda hash -->
+        <div class="boton-volver">
+            <a href="busqueda_hash.html">&larr; Volver a Búsqueda Hash</a>
+        </div>
+
+    </div>
+</body>
+</html>

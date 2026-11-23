@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>6.2 Búsqueda Binaria</title>
+    <!-- Conectamos la hoja de estilos unificada -->
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="contenedor-principal">
+
+        <h1>6.2. Búsqueda Binaria</h1>
+
+        <div class="subtitulo-seccion">¿Qué es la búsqueda binaria?</div>
+        <p class="texto-explicacion">
+            La búsqueda binaria es un algoritmo altamente eficiente diseñado para encontrar un elemento dentro de una lista o arreglo que se encuentre
+            <strong>previamente ordenado</strong>. En lugar de revisar los datos uno por uno, el algoritmo funciona dividiendo repetidamente el espacio de búsqueda
+            a la mitad, descartando el 50% de los elementos en cada paso. Por ejemplo, es el mismo principio que usamos al buscar una palabra en un diccionario impreso
+            o un nombre en una guía telefónica.
+        </p>
+
+        <div class="subtitulo-seccion">Cómo funciona (paso a paso)</div>
+        <div class="contenedor-bloque">
+            <ol>
+                <li>Definir dos apuntadores: <strong>Inicio</strong> (primer elemento de la lista) y <strong>Fin</strong> (último elemento).</li>
+                <li>Calcular el índice del elemento central (la mitad exacta entre el inicio y el fin).</li>
+                <li>Comparar el valor del elemento objetivo con el elemento que está justo en el centro.</li>
+                <li>Si coinciden, el algoritmo ha encontrado el dato y devuelve su posición (índice).</li>
+                <li>Si el objetivo es menor que el centro, se descarta toda la mitad derecha ajustando el apuntador de <em>Fin</em> a la izquierda del centro.</li>
+                <li>Si el objetivo es mayor que el centro, se descarta toda la mitad izquierda ajustando el apuntador de <em>Inicio</em> a la derecha del centro.</li>
+                <li>El ciclo se repite hasta encontrar el elemento o hasta que los apuntadores se crucen, lo que indica que el dato no existe en la lista.</li>
+            </ol>
+        </div>
+
+        <div class="subtitulo-seccion">Ventajas y Desventajas</div>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Alta velocidad:</strong> Es sumamente rápida, incluso con millones de datos (ideal para bases de datos y catálogos masivos).</li>
+                <li><strong>Menor cantidad de comparaciones:</strong> Reduce drásticamente el esfuerzo de procesamiento de la computadora en comparación con la búsqueda lineal.</li>
+                <li><strong>Requisito estricto (Desventaja):</strong> La lista <strong>debe estar ordenada obligatoriamente</strong> antes de aplicar el algoritmo; si los datos están revueltos, no funcionará correctamente.</li>
+            </ul>
+        </div>
+
+        <div class="subtitulo-seccion">Complejidad algorítmica</div>
+        <div class="contenedor-bloque">
+            <ul>
+                <li><strong>Mejor caso:</strong> O(1) &mdash; el elemento buscado se encuentra exactamente en la posición central a la primera comparación.</li>
+                <li><strong>Caso promedio y Peor caso:</strong> O(log n) &mdash; el espacio de búsqueda se reduce a la mitad en cada iteración.</li>
+                <li><strong>Espacio:</strong> O(1) en su versión iterativa, utilizando solo variables auxiliares básicas.</li>
+            </ul>
+        </div>
+
+        <!-- Enlace hacia la página independiente con el ejemplo en C# -->
+        <div class="contenedor-enlace-extra">
+            <a href="ejemplo_binaria.html">Ver ejemplo e implementación en C# &rarr;</a>
+        </div>
+
+        <!-- Botón para regresar a métodos -->
+        <div class="boton-volver">
+            <a href="metodos_ordenamiento.html">&larr; Volver a Métodos de Ordenamiento</a>
+        </div>
+
+    </div>
+</body>
+</html>
