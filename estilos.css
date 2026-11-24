@@ -130,3 +130,39 @@ a:hover {
 .boton-volver a:hover {
     background-color: #030406;
 }
+/* Estilos para las fotos de las integrantes en la portada */
+.contenedor-fotos-equipo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.tarjeta-integrante {
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace que la foto sea redonda tipo círculo */
+    object-fit: cover;
+    border: 3px solid #38bdf8; /* Borde neón brillante */
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.nombre-integrante {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cbd5e1;
+    font-weight: bold;
+}
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace la foto redonda */
+    object-fit: cover;  /* Evita que se deforme o salga gigante */
+    border: 3px solid #38bdf8; /* Borde neón */
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
