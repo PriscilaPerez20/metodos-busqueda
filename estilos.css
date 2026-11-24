@@ -159,10 +159,10 @@ a:hover {
     font-weight: bold;
 }
 .foto-perfil {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Hace la foto redonda */
-    object-fit: cover;  /* Evita que se deforme o salga gigante */
-    border: 3px solid #38bdf8; /* Borde neón */
+    width: 130px;
+    height: 130px;
+    border-radius: 12px; /* Esquinas ligeramente redondeadas estilo cuadrado moderno */
+    object-fit: cover;  /* Evita que la foto se deforme */
+    border: 3px solid #38bdf8; /* Tu borde neón brillante */
     box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
 }
